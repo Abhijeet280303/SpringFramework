@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        
+        
+        <!-- using the  Collection injection (like we earlier injected the primitiev values into the 
+                                                     primitive values )-->
+
+   <bean class="com.SpringTrial5.Beans.Employee" id="Emp1">
+   		<property name="month">
+   			<list>
+   				<value>Jan</value>
+   				<value>Feb</value>
+   				<value>Mar</value>
+   				<value>Apr</value>
+   				<value>may</value>
+   			</list>
+   		</property>
+   		
+   		<property name="EmployeeID" value="123001" />
+   		<property name="Name" value="Prankit Rao"/>
+   		<property name="Department" value="IT"/>
+   </bean>
+   
+   <!-- Map insertion in to bean -->
+   
+   <bean class="com.SpringTrial5.Beans.Book" id="Book1">
+   		<property name="EditionAndAuthor">
+   			<map>
+   				<entry key="HP_valume01" value="Jossph Antonie"/>
+   				<entry key="HP_volume02" value="Kristine bale"/>
+   				<entry key="HP_volume03" value="Sofie stakk"/>
+   			</map>
+   			
+   		</property>
+   		
+   		<property name="name" value="Harry Potter" />
+   		
+   </bean>
+   
+   <!-- see once what is the propety we use like the list and map -->
+
+</beans>
