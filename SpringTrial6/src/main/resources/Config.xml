@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        
+        
+        <!-- using the primitive data injection-->
+
+    <!-- 1 traditional way -->
+    <bean class="com.SpringTrial6.Beans.Student" name="Student1">
+    			<property name="studentName">
+    				<value>Durga</value> 
+    			</property>
+    			<property name="studentRollNo">
+    				<value>101</value> 
+    			</property>
+    			<property name="studentAddress">
+    				<value>Maitrivanam</value> 
+    			</property>
+    
+    </bean>
+    
+   <!-- 2 another way -->
+    <bean class="com.SpringTrial6.Beans.Student" name="Student2">
+    			<property name="studentName" value="Durgesh Tiwari"/>   				
+    			<property name="studentRollNo" value="102"/>  				
+    			<property name="studentAddress" value="Utterpradesh"/>
+    </bean>
+    
+   <!-- 3 another way Using the p schema  -->
+    <bean class="com.SpringTrial6.Beans.Student" name="Student3" p:studentName="Ravi" p:studentRollNo="103" p:studentAddress="kerala"  />
+    			
+    
+    
+    <bean class="com.SpringTrial6.Beans.Engine" id="Enginebean">
+    	
+    </bean>
+    
+    <bean class="com.SpringTrial6.Beans.Car" id="Carbean">
+    <property name="engine"> <ref bean="Enginebean"/></property>
+    </bean>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</beans>
