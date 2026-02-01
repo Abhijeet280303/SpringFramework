@@ -1,0 +1,13 @@
+# Maven
+target/
+
+# Eclipse (ignore ONLY root-level junk)
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
