@@ -39,13 +39,33 @@
     			
     
     
+    
+    <!-- VV importaint __ Reference injection -->
+    
     <bean class="com.SpringTrial6.Beans.Engine" id="Enginebean">
     	
     </bean>
     
+    <!-- Dependant Bean -->
     <bean class="com.SpringTrial6.Beans.Car" id="Carbean">
+    
     <property name="engine"> <ref bean="Enginebean"/></property>
+    
+    <!--  Or like -  <property name="engine" ref="Enginebean"/>  -->
+    
+    
+    
     </bean>
+    
+    
+    
+    
+    
+    <!-- Other simplified way and a better use -->
+    
+    
+     <bean class="com.SpringTrial6.Beans.Engine" id="Enginebean"/>
+    <bean class="com.SpringTrial6.Beans.Car" id="Carbean" p:engine-ref="Enginebean" />
     
     
     

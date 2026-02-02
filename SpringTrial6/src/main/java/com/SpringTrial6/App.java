@@ -20,8 +20,7 @@ public class App
         
         ApplicationContext context = new ClassPathXmlApplicationContext("Config.xml");
         
-//        Student student1 = (Student)context.getBean("Student1");
-//        System.out.println(student1);
+
         
         Car car = (Car)context.getBean("Carbean");
         car.Drive();
