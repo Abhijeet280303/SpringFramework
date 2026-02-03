@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+        
+        
+        <util:list list-class="java.util.ArrayList" id="Myapplist">
+        		<value>Instagram</value>
+        		<value>Linkedin</value>
+        		<value>PhonePay</value>
+        </util:list>
+        
+        	<util:map map-class="java.util.HashMap" id="availmodelNprice">
+        		<entry key="SamsuhgGal781" value="15000"/>
+        		<entry key="SamsuhgGal781" value="15000"/>
+        </util:map>
+        
+        
+     
+        
+        
+        <bean class="com.SpringTrial8.StandaloneCollections.Smartphone" name="smartphone1">
+        			<property name="apps" ref="Myapplist"/>
+        			<property name="modelAndPrice" ref="availmodelNprice"/>
+        	</bean>
+        				<!-- <list>
+        			 			<value>instagram</value>  rather than doining this we do declare a bean outside and use it again and again as required 
+        			 		</list>     -->
+        			
+        
+        
+        
+     
+        
+</beans>
