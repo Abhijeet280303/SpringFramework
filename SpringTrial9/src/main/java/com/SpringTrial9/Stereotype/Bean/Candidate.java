@@ -1,5 +1,7 @@
 package com.SpringTrial9.Stereotype.Bean;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +13,11 @@ public class Candidate {
 	
 	@Value("1001")
 	private int uid;
+	
+	@Value("#{SkillSet}")
+	private List<String> skills;
+	
+	
 	
 	public String getCandiadate_name() {
 		return candiadate_name;
@@ -24,9 +31,16 @@ public class Candidate {
 	public void setUid(int uid) {
 		this.uid = uid;
 	}
+	
+	public List<String> getSkills() {
+		return skills;
+	}
+	public void setSkills(List<String> skills) {
+		this.skills = skills;
+	}
 	@Override
 	public String toString() {
-		return "Candidate [candiadate_name=" + candiadate_name + ", uid=" + uid + "]";
+		return "Candidate [candiadate_name=" + candiadate_name + ", uid=" + uid + ", skills=" + skills + "]";
 	}
 	
 	

@@ -17,15 +17,14 @@ public class Student {
 //		super();
 //		this.name = name;
 //		this.roll_number = roll_number;
-//		this.student_address=student_address;
+//		this.student_address=student_address;               this wont work as @Autowired constructor = Spring must supply ALL parameters as beans
 //	}
 	
 	
-	public Student(String name, int roll_number, Address student_address) {
+	public Student(String name, int roll_number) {
 		super();
 		this.name = name;
 		this.roll_number = roll_number;
-		this.student_address=student_address;
 	}
 	
 	@Autowired

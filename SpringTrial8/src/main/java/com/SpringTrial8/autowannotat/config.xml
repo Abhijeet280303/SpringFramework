@@ -13,7 +13,7 @@
         <context:annotation-config />
         
         
-        <bean class="com.SpringTrial8.autowannotat.Address" name="student_address" c:street="st.Brt road" c:city="pune" />
+        <bean class="com.SpringTrial8.autowannotat.Address" name="student_address1" c:street="st.Brt road" c:city="pune" />
         
         <bean class="com.SpringTrial8.autowannotat.Student" name="student" p:name="Durga" p:roll_number="1001"  />
         

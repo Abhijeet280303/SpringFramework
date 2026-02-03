@@ -16,5 +16,10 @@ public class App
         Candidate c1=cont.getBean("CandidateObject", Candidate.class);
         
         System.out.println(c1);
+        System.out.println(c1.getSkills().getClass().getName());  
+        													//checking whether configured Standalone collection injected or not 
+        
+        
+        
     }
 }
