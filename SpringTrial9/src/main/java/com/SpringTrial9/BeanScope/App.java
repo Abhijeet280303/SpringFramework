@@ -13,8 +13,9 @@ public class App
         System.out.println( "Hello World!" );
         
         ApplicationContext cont = new ClassPathXmlApplicationContext("com/SpringTrial9/BeanScope/config.xml");
-        Customer c1=cont.getBean("regularCustomer",Customer.class);
-        Customer c2=cont.getBean(Customer.class);
+        
+        Customer c1=cont.getBean("regularCustomer",Customer.class);  //name+type based resolve
+        Customer c2=cont.getBean(Customer.class);                    //type based resolve
         
         System.out.println(c1.hashCode());
         System.out.println(c2.hashCode());
