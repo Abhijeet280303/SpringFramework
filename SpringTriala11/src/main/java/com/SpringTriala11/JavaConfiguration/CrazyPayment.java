@@ -2,7 +2,8 @@ package com.SpringTriala11.JavaConfiguration;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
+
 public class CrazyPayment {
 
 	public void provideData() {

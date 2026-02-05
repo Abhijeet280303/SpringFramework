@@ -57,18 +57,19 @@
     
     </bean>
     
-    
-    
-    
-    
     <!-- Other simplified way and a better use -->
     
+    <!-- 
+		
+		
     
      <bean class="com.SpringTrial6.Beans.Engine" id="Enginebean"/>
     <bean class="com.SpringTrial6.Beans.Car" id="Carbean" p:engine-ref="Enginebean" />
     
-    
-    
+		
+	-->
+   
+  
     
     
     
