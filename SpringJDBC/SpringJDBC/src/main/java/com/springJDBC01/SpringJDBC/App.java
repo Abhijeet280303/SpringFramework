@@ -3,11 +3,14 @@ package com.springJDBC01.SpringJDBC;
 
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.springJDBC01.SpringJDBC.Entity.Employee;
 import com.springJDBC01.SpringJDBC.Services.EmployeeDAPOImpl;
+
+import resources.JavaBaseConfig;
 
 /**
  * Hello world!
@@ -32,12 +35,14 @@ public class App
             //to put the values in the update() and similarly other ...  lets do -> 
     	
         
-        ApplicationContext context = new ClassPathXmlApplicationContext("resources/xmlConfig.xml");
-        EmployeeDAPOImpl employeeDAPOImpl= context.getBean("employeeService" , EmployeeDAPOImpl.class);
+//        ApplicationContext context = new ClassPathXmlApplicationContext("resources/xmlConfig.xml");
+        
+        ApplicationContext context2 = new AnnotationConfigApplicationContext(JavaBaseConfig.class);
+        EmployeeDAPOImpl employeeDAPOImpl= context2.getBean("employeeService" , EmployeeDAPOImpl.class);
         
         Employee e1= new Employee();
-        e1.setDept_name("Warehouse Department");
-        e1.setDept_no(1013);
+        e1.setDept_name("JavaConfigued Department");
+        e1.setDept_no(1014);
         
         
         employeeDAPOImpl.insert(e1);
