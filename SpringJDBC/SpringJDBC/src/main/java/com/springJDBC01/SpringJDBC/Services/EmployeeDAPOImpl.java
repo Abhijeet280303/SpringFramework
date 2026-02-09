@@ -17,6 +17,16 @@ public class EmployeeDAPOImpl implements EmployeeDAO {
 	}
 
 	
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+	
+	
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	
 	@Override
 	public int insert(Employee employee) {
 		String InsertQuery= "INSERT INTO departments(dept_no,dept_name) VALUES (?,?)";
@@ -26,13 +36,12 @@ public class EmployeeDAPOImpl implements EmployeeDAO {
 	}
 
 
-	public JdbcTemplate getJdbcTemplate() {
-		return jdbcTemplate;
-	}
 
-
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
+	@Override
+	public int Update(Employee employee) {
+		String UpdateQuery="UPDATE departments SET dept_name=? WHERE dept_no=? " ;
+		int rowsAffected=jdbcTemplate.update(UpdateQuery,employee.getDept_name(), employee.getDept_no());
+		return rowsAffected;
 	}
 
 }

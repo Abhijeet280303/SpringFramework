@@ -1,16 +1,16 @@
 package com.springJDBC01.SpringJDBC.Entity;
 
 public class Employee {
-	private int dept_no;
+	private String dept_no;
 	private String dept_name;
 	
 	
 
-	public int getDept_no() {
+	public String getDept_no() {
 		return dept_no;
 	}
 
-	public void setDept_no(int dept_no) {
+	public void setDept_no(String dept_no) {
 		this.dept_no = dept_no;
 	}
 

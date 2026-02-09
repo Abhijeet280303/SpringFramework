@@ -5,5 +5,7 @@ import com.springJDBC01.SpringJDBC.Entity.Employee;
 public interface EmployeeDAO {
 	
 	public int insert(Employee employee);
+	
+	public int Update(Employee employee);
 
 }
