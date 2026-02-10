@@ -40,8 +40,17 @@ public class EmployeeDAPOImpl implements EmployeeDAO {
 	@Override
 	public int Update(Employee employee) {
 		String UpdateQuery="UPDATE departments SET dept_name=? WHERE dept_no=? " ;
-		int rowsAffected=jdbcTemplate.update(UpdateQuery,employee.getDept_name(), employee.getDept_no());
+		int rowsAffected=this.jdbcTemplate.update(UpdateQuery,employee.getDept_name(), employee.getDept_no());
 		return rowsAffected;
+	}
+
+
+	@Override
+	public int Delete(String dept_no) {
+		String DeleteQuery="DELETE FROM departments WHERE dept_no = ?";
+		int rowsaffected=this.jdbcTemplate.update(DeleteQuery,dept_no);
+		System.out.println("Deleted the rocord for "+dept_no+"Department number");
+		return rowsaffected;
 	}
 
 }

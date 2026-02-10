@@ -39,17 +39,22 @@ public class App
         
         ApplicationContext context2 = new AnnotationConfigApplicationContext(JavaBaseConfig.class);     //Using JAVA config
         EmployeeDAPOImpl employeeDAPOImpl= context2.getBean("employeeService" , EmployeeDAPOImpl.class);
-        
-//        Employee e1= new Employee();
-//        e1.setDept_name("JavaConfigued Department");
-//        e1.setDept_no(1014);  
+        //INSERT
+        Employee e1= new Employee();
+        e1.setDept_name("JavaConfigued Department");
+        e1.setDept_no("1014");  
 //        employeeDAPOImpl.insert(e1);
         
+        //UPDATE
         Employee e2 = new Employee();
         e2.setDept_name("Updated-JavaConfigued Department2");
         e2.setDept_no("1014");
         
-        employeeDAPOImpl.Update(e2);
+//        employeeDAPOImpl.Update(e2);
+        
+        
+        //DELETE
+        employeeDAPOImpl.Delete("d007");
         
     }
 }
